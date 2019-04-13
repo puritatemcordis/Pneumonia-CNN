@@ -25,9 +25,9 @@ def predict_images(file):
     predictions = model.predict_classes(images, batch_size=batch_size)
     for object in predictions:
         if object == 0:
-            print("No tumor")
+            print("No pneumonia")
         elif object == 1:
-            print("Tumor")
+            print("pneumonia")
 
 if __name__ == "__main__":
     predict_images('pneumonia.h5')
